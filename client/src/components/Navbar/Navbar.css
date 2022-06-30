@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 nav{
+    font-family: Montserrat;
     min-height: 50px;
     width: 100%;
     margin: 0% auto;
-    border-top: solid 3px orange;
     box-shadow: 0px 1px 5px #000000;
     display: flex;
     justify-content: center;
@@ -24,12 +25,13 @@ nav{
 
 .nav-logo{
     padding: 2px 20px;
+    margin-top: 5px;
 }
 
 .nav-item{
     margin: 0px 3px;
     font-size: medium;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     color: black;
     transition: 0.2s;
@@ -42,7 +44,7 @@ nav{
 }
 
 .nav-item:hover{
-    background-color: rgb(220, 220, 220);
+    background-color: #f9e2e8;
 }
 
 .navbar form{
@@ -53,10 +55,11 @@ nav{
 
 .navbar form input{
     min-width: 90%;
-    padding: 8px 10px 8px 32px;
+    padding: 8px 10px 8px 38px;
     margin: 0%;
-    font-size: 15px;
-    border: solid 1px #0000003e;
+    font-size: medium;
+    font-weight: 700;
+    border: solid 2px #000000;
     border-radius: 3px;
 }
 
@@ -68,12 +71,12 @@ nav{
 
 .nav-link{
     padding: 7px 13px;
-    border: solid 1px blue;
+    border: solid 1px #ec426d;
     border-radius: 3px;
-    background-color: aliceblue;
+    background-color: #f4ced8;
     cursor: pointer;
 }
 
 .nav-link:hover{
-    background-color: rgb(103, 103, 196);
+    background-color: #df7390;
 }
