@@ -5,7 +5,7 @@ import './Auth.css'
 import icon from '../../assests/icon.png'
 
 const Auth = () => {
-  const [isSignup, setIsSignup] = useState(true);
+  const [isSignup, setIsSignup] = useState(false);
 
   const handleSwitch = () => {
     setIsSignup(!isSignup);
