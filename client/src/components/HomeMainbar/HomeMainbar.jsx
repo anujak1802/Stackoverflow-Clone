@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeMainbar = () => {
   return (
-    <div>HomeMainbar</div>
+    <div></div>
   )
 }
 

@@ -1,0 +1,7 @@
+.left-sidebar{
+    width: 164px;
+    box-sizing: border-box;
+    border: 1px 1px 0px rgba(0,0,0,0.2);
+    transition: box-shadow ease-in-out 0.2s, transform ease-in-out 0.2s;
+    transform: translateZ(0);
+}

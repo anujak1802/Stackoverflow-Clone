@@ -10,7 +10,7 @@ const Navbar = () => {
 
     var User = null;
     return (
-        <nav>
+        <nav className='main-nav'>
             <div className="navbar">
                 <Link to='/' className=' nav-logo'>
                     <img src={logo} alt="logo" width='200' height='55'/>
