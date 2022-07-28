@@ -42,3 +42,41 @@
     padding: 10px 20px;
     cursor: pointer;
 }
+
+.nav-item:hover{
+    background-color: #f9e2e8;
+}
+
+.navbar form{
+    flex-grow: 1;
+    padding: 0px 12px;
+    position: relative;
+}
+
+.navbar form input{
+    min-width: 90%;
+    padding: 8px 10px 8px 38px;
+    margin: 0%;
+    font-size: medium;
+    font-weight: 700;
+    border: solid 2px #000000;
+    border-radius: 3px;
+}
+
+.navbar form .search-icon{
+    position: absolute;
+    left: 25px;
+    top: 8px;
+}
+
+.nav-link{
+    padding: 7px 13px;
+    border: solid 1px #ec426d;
+    border-radius: 3px;
+    background-color: #f4ced8;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    background-color: #df7390;
+}
