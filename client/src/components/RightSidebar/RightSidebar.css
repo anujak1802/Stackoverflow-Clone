@@ -1,8 +1,8 @@
 .right-sidebar {
   float: right;
   width: 290px;
-  margin: 50px 0px 15px 24px;
-  font-size: 15px;
+  margin: 60px 0px 15px 24px;
+  font-size: 13px;
 }
 
 .widget {
@@ -32,7 +32,7 @@
 .right-sidebar-div-1 .right-sidebar-div-2 p {
   padding-left: 15px;
   margin: 0%;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .widget-tags {
@@ -42,7 +42,7 @@
 
 .widget-tags h4 {
   margin: 0%;
-  padding: 15px;
+  padding: 10px;
   background-color: #f8f9f9;
   border: solid 1px #fde9ee;
 }
@@ -61,5 +61,5 @@
   background-color: #e1ecf4;
   color: blue;
   border-radius: 2px;
-  font-size: 14px;
+  font-size: 13px;
 }
