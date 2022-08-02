@@ -1,13 +1,13 @@
 import React from 'react'
 import Questions from './Questions'
 
-const QuestionsList = (questionList) => {
+const QuestionsList = ({questionsList}) => {
   return (
     <>
         {
-            questionList.map((question) =>{
+            questionsList.map((question) =>(
                 <Questions question={question} key={question}/>
-            })
+            ))
         }
     </>
   )
