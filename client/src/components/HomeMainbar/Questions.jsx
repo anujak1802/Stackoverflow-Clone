@@ -21,6 +21,9 @@ const Questions = ({question}) => {
               ))
             }
           </div>
+          <div className="display-time">
+            <p>asked {question.time} {question.userPosted}</p>
+          </div>
         </div>
     </div>
   )
