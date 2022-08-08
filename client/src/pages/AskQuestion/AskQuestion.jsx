@@ -16,7 +16,7 @@ const AskQuestion = () => {
                     <label htmlFor="ask-ques-body">
                         <h4>Body</h4>
                         <p>Include all the information someone would need to answer your question</p>
-                        <textarea name="" id="ask-ques-body" cols="30" rows="10"></textarea>
+                        <textarea name="" id="ask-ques-body" cols="30" rows="6"></textarea>
                     </label>
                     <label htmlFor="ask-ques-tags">
                         <h4>Tags</h4>

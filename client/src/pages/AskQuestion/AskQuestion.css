@@ -9,7 +9,7 @@
 }
 
 .ask-ques-container h1{
-    padding: 80px 0px 20px 0px;
+    padding: 80px 0px 5px 0px;
 }
 
 .ask-ques-container form .ask-form-container{
@@ -36,4 +36,20 @@
     border: solid 1px #0000003e;
     resize: vertical;
     font-family: 'Roboto', sans-serif;
+}
+
+.review-btn{
+    margin: 30px 0px;
+    padding: 10px;
+    border: solid 1px #ec426d;
+    border-radius: 3px;
+    background-color: #f4ced8;
+    transition: 0.3s;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+}
+
+.review-btn:hover{
+    background-color: #df7390;
 }
