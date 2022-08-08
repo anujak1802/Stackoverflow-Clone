@@ -16,7 +16,7 @@
     padding: 20px;
     background-color: white;
     border-radius: 3px;
-    box-shadow: 3px 3px 10px rgb(0 0 0/5%), -3px -3px 10px rgb(0 0 0/5%);;
+    box-shadow: -5px 5px 20px #f5d6de, 5px -5px 20px #f5d6de;
 }
 
 .ask-form-container label h4{
