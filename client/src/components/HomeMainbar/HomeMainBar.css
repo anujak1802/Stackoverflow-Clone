@@ -2,7 +2,7 @@
     width: calc(100% - 300px - 24px);
     float: left;
     padding:0;
-    margin:30px 0px;
+    margin:40px 0px;
 }
 
 .main-bar-header{
@@ -23,6 +23,7 @@
     padding: 10px 15px;
     transition:0.2s;
     border: 1px solid #df7390;
+    font-weight: 500;
 }
 
 .main-bar-header .ask-btn:hover{
@@ -54,7 +55,7 @@
 
 .question-title-link{
     text-decoration: none;
-    color:rgb(92, 182, 255);
+    color:rgb(3, 57, 101);
     transition: 0.3s;
     font-weight: 500;
 }
