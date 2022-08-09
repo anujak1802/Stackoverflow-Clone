@@ -19,32 +19,56 @@ const HomeMainbar = () => {
   }
 
   var questionsList=[{
-    id:1,
-    votes:3,
+    _id:1,
+    upVote:3,
+    downVote:2,
     noOfAnswers:2,
     QuestionTitle:'What is function?',
     QuestionBody:'It meant to be',
     questionTags:['java','nodejs','mongodb','reactjs'],
     userPosted:'mano',
-    time:'Jan 1'
+    userId:1,
+    time:'Jan 1',
+    answer:[{
+      answerBody:"Answer",
+      userAnswered:"kumar",
+      answeredOn:"jan 2",
+      userId:2
+    }]
   },{
-    id:2,
-    votes:0,
+    _id:2,
+    upVote:0,
+    downVote:2,
     noOfAnswers:2,
     QuestionTitle:'What is function?',
     QuestionBody:'It meant to be',
     questionTags:['java','nodejs','mongodb','reactjs'],
     userPosted:'mano',
-    time:'Jan 1'
+    userId:1,
+    time:'Jan 1',
+    answer:[{
+      answerBody:"Answer",
+      userAnswered:"kumar",
+      answeredOn:"jan 2",
+      userId:2
+    }]
   },{
-    id:3,
-    votes:1,
+    _id:3,
+    upVote:1,
+    downVote:2,
     noOfAnswers:2,
     QuestionTitle:'What is function?',
     QuestionBody:'It meant to be',
     questionTags:['java','nodejs','mongodb','reactjs'],
     userPosted:'mano',
-    time:'Jan 1'
+    userId:1,
+    time:'Jan 1',
+    answer:[{
+      answerBody:"Answer",
+      userAnswered:"kumar",
+      answeredOn:"jan 2",
+      userId:2
+    }]
   }]
 
   const location= useLocation();
