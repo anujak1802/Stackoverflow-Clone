@@ -8,7 +8,7 @@ import Search from '../../assests/magnifying-glass-solid.svg'
 
 const Navbar = () => {
 
-    var User = null;
+    var User = 1;
     return (
         <nav className='main-nav'>
             <div className="navbar">

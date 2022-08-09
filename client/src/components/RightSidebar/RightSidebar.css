@@ -7,19 +7,20 @@
 
 .widget {
   box-shadow: 3px 3px 10px rgb(0 0 0/5%), -3px -3px 10px rgb(0 0 0/5%);
+  border-radius: 10px;
 }
 
 .widget h4 {
   margin: 0%;
   padding: 10px;
-  background-color: #df7390;
-  border: solid 1px #ec426d;
+  /* background-color: #df7390; */
+  /* border: solid 1px #ec426d; */
 }
 
 .right-sidebar-div-1 {
-  background-color: #f4ced8;
+  /* background-color: #f4ced8; */
   padding: 15px;
-  border: solid 1px #ec426d;
+  /* border: solid 1px #ec426d; */
 }
 
 .right-sidebar-div-1 .right-sidebar-div-2 {
