@@ -19,7 +19,7 @@ const HomeMainbar = () => {
   }
 
   var questionsList=[{
-    _id:1,
+    _id:'1',
     upVote:3,
     downVote:2,
     noOfAnswers:2,
@@ -36,7 +36,7 @@ const HomeMainbar = () => {
       userId:2
     }]
   },{
-    _id:2,
+    _id:'2',
     upVote:0,
     downVote:2,
     noOfAnswers:2,
@@ -53,7 +53,7 @@ const HomeMainbar = () => {
       userId:2
     }]
   },{
-    _id:3,
+    _id:'3',
     upVote:1,
     downVote:2,
     noOfAnswers:2,
