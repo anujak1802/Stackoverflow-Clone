@@ -37,8 +37,9 @@
     width: 100%;
     display: flex;
     align-items: center;
-    border-bottom: solid 1px #ec426d;
-    background-color: #f4ced8;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    box-shadow: 3px 3px 10px rgba(243, 198, 218, 0.877), -3px -3px 10px rgba(243, 198, 218, 0.877);
 }
 
 .display-question-container .display-votes-ans{
