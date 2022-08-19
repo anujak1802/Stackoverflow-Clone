@@ -1,14 +1,14 @@
 import React from 'react'
 import Questions from './Questions'
 
-const QuestionsList = ({questionsList}) => {
+const QuestionsList = ({ questionsList }) => {
   return (
     <>
-        {
-            questionsList.map((question) =>(
-                <Questions question={question} key={question}/>
-            ))
-        }
+      {
+        questionsList.map((question) => (
+          <Questions question={question} key={question} />
+        ))
+      }
     </>
   )
 }
