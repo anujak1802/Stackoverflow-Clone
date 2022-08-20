@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
+import userRoutes from './routes/users.js'
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send("This is TeachMeHow website")
 })
+
+app.use('/users', userRoutes)
 
 const PORT = process.env.PORT || 5000
 
