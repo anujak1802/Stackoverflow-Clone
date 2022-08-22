@@ -3,28 +3,49 @@ import { useState } from 'react';
 import AboutAuth from './AboutAuth';
 import './Auth.css'
 import icon from '../../assests/icon.png'
+import {signup,login} from '../../actions/auth'
 
 const Auth = () => {
   const [isSignup, setIsSignup] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
 
   const handleSwitch = () => {
     setIsSignup(!isSignup);
   }
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    if(!email && !password){
+      alert('Enter email and password')
+    }
+    if(isSignup){
+      if(!name){
+        alert('Enter name to signup')
+      }
+      signup({name,email,password})
+    }else{
+      login({email,password})
+    }
+  }
+
   return (
     <div className='auth-section'>
       {isSignup && (<AboutAuth />)}
       <div className="auth-container-2">
         {!isSignup && <img src={icon} alt="icon" className='login-logo' />}
-        <form>
+        <form onSubmit={handleSubmit}>
           {isSignup && (
             <label htmlFor="name">
               <h4>Display name:</h4>
-              <input type="text" name='name' id='name' />
+              <input type="text" name='name' id='name' onChange={(e)=>{setName(e.target.value)}}/>
             </label>
           )}
           <label htmlFor="email">
             <h4>Email:</h4>
-            <input type="email" name='email' id='email' />
+            <input type="email" name='email' id='email' onChange={(e)=>{setEmail(e.target.value)}}/>
           </label>
           <label htmlFor="password">
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -33,7 +54,7 @@ const Auth = () => {
                 <p style={{ color: 'blue', fontSize: '13px' }}>forgot password?</p>
               )}
             </div>
-            <input type="password" name='password' id='password' />
+            <input type="password" name='password' id='password' onChange={(e)=>{setPassword(e.target.value)}}/>
             {isSignup && (
               <p style={{ color: 'grey', fontSize: '13px' }}>Passwords must contain eight characters, including<br /> 1 Uppercase character and 1 integer.</p>
             )}
