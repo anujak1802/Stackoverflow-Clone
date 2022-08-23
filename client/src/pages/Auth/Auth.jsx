@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import AboutAuth from './AboutAuth';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import './Auth.css'
 import icon from '../../assests/icon.png'
 import {signup,login} from '../../actions/auth'
@@ -16,6 +18,9 @@ const Auth = () => {
     setIsSignup(!isSignup);
   }
 
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
   const handleSubmit = (e)=>{
     e.preventDefault();
     if(!email && !password){
@@ -25,9 +30,9 @@ const Auth = () => {
       if(!name){
         alert('Enter name to signup')
       }
-      signup({name,email,password})
+      dispatch(signup({name,email,password},navigate))
     }else{
-      login({email,password})
+      dispatch(login({email,password},navigate))
     }
   }
 
