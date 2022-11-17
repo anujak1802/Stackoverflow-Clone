@@ -1,5 +1,5 @@
 import React from 'react'
-import './HomeMainbar.css'
+import './HomeMainBar.css'
 import QuestionsList from './QuestionsList'
 import { useLocation, useNavigate } from 'react-router-dom'
 

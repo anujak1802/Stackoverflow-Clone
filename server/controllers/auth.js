@@ -1,41 +1,43 @@
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptjs';
+import  user from "../models/users.js"
+import  jwt  from "jsonwebtoken"
+import bcrypt from 'bcrypt'
 
-import users from '../models/auth.js'
 
-
-export const signup = async (req, res) => {
-    const { name, email, password} = req.body;
+export const signup =async (req,res) =>{
+    const {name, email, password} = req.body
     try {
-        const existinguser = await users.findOne({ email });
-        if(existinguser){
-            return res.status(404).json("User Already Exist.")
-        }
-
-        const hashedPassword = await bcrypt.hash(password, 12)
-        const newUser = await users.create({ name, email, password: hashedPassword })
-        const token = jwt.sign({ email: newUser.email, id: newUser._id}, "test", {expiresIn: '1h'});
-        res.status(200).json({ result: newUser, token})
-    } catch (error) {
-        res.status(500).json("Something went wrong...")
-    }
-}
-export const login = async (req, res) => {
-    const { email, password} = req.body;
-    try {
-        const existinguser = await users.findOne({ email });
-        if(!existinguser){
-            return res.status(404).json("User Don't Exist.")
-        }
+        const existingUser = await user.findOne({email})
         
-        const isPasswordCrt = await bcrypt.compare(password, existinguser.password)
-        if(!isPasswordCrt){
-            return res.status(400).json({message: "Invalid Credentials"})
+        if(existingUser)
+        {
+            return res.status(404).json("User already exist")
         }
-        const token = jwt.sign({ email: existinguser.email, id: existinguser._id}, "test" , {expiresIn: '1h'});
-        res.status(200).json({ result: existinguser, token})
-
+        const hashPassword = await bcrypt.hash(password,10);
+        const newUser = await user.create({name, email, password:hashPassword})
+        const token = jwt.sign({email:newUser.email, id:newUser._id},process.env.JWT_PASS,{expiresIn:"1h"})
+        res.status(200).json({result: newUser, token})
     } catch (error) {
-        res.status(500).json("Something went wrong...")
+        res.status(500).json("Something went wrong ");
+    }
+    
+}
+
+export const login = async(req,res) =>{
+    const {email, password} = req.body;
+    try {
+        const existingUser = await user.findOne({email})
+       if(!existingUser)
+       {
+        return res.status(404).json("User does not exist")
+       }
+       const isPasswordCorrect = await bcrypt.compare(password,existingUser.password)
+       if(!isPasswordCorrect)
+       {
+        return res.status(401).json("Wrong Credentials"); 
+       }
+       const token = jwt.sign({email:existingUser.email, id:existingUser._id},process.env.JWT_PASS,{expiresIn:"1h"})
+       res.status(200).json({result: existingUser, token})
+    } catch (error) {
+        res.status(500).json("Something went wrong");        
     }
 }
